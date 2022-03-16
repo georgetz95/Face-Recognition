@@ -1,7 +1,6 @@
 numpy
 pandas
 scipy
-flask
-scikit-image
+Flask
 scikit-learn
 gunicorn
