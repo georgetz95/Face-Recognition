@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+
+<div class="container">
+    <h3 class="content">Face and Gender Recognition Application</h3>
+    <p class="content">
+        Upload any image containing either a male or female face, and the Machine Learning model will output a prediction.
+    </p>
+    <img src="{{ url_for('static', filename='images/pipeline.png') }}" alt="pipeline" height="200">
+</div>
+<div class="container">
+    <br>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <label for="upload">Upload Image</label>
+        <input type="file" id="upload" name="image" required="true">
+        <input type="submit" value="Upload & Predict">
+        
+    </form>
+</div>
+
+{% if file_upload %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="predict">
+                <br><br>
+                <img src="{{ url_for('static', filename='uploads/' + img_name) }}" alt="uploaded image" width="{{width}}" height="{{height}}">
+            </div>
+            <div class="col-md-6" id="predict">
+                <br><br>
+                <img src="{{ url_for('static', filename='predict/' + img_name) }}" alt="uploaded image" width="{{width}}" height="{{height}}"><br><br>
+            </div>
+            
+        </div>
+    </div>
+        
+{% endif %}
+    
+{% endblock %}

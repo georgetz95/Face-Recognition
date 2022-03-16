@@ -1,0 +1,35 @@
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgb(194, 203, 230);*/
+}
+
+#footer_text{
+    position: fixed;
+    color: black;
+    font-size: 18px;
+    padding: 20px;
+    bottom: -20px;
+    right: 150px;
+}
+#footer_img{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#predict{
+    border: solid 3px;
+    color: #002f4d;
+    text-align: center;
+}
+
+#image_col {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    
+  }
+  

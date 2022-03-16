@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block bodyblock %}
+
+<div class="container">
+    <br><br>
+    <h1>Face and Gender Recognition Application</h1>
+    <h4>This Machine Learning model was created using PCA Dimensionality Reduction and Support Vector Machine Classifier.</h4>
+    <img src="{{ url_for('static', filename='images/face_1.jpg') }}" height="500">
+    <br><br>
+    <div align="center">
+        <a href="{{ url_for('faceapp') }}" class="btn btn-outline-primary">Try it now</a>
+    </div>
+    <br><br>
+    <h5>For a full walkthrough of the process of creating this model, click on the "About" tab.</h5>
+</div>
+
+{% endblock %}

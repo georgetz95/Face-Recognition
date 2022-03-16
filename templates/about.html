@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block bodyblock %}
+<h3>About</h3>
+
+<div class="container">
+    <div class="row">
+        <p>
+            This Face Recognition and Gender Classifier was created using a sample of 14,000 images consisting of male and female faces.
+            For each image, the face was cropped using <a href="https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html" target="_blank">Haar Cascade Classifier</a>,
+             a machine learning object detection program that identifies objects in an image and video.
+        </p>
+    </div>
+    <div class="row" id="image_row">
+        <div class="column" id="image_col">
+          <img src="{{ url_for('static', filename='images/ex_1.png') }}" alt="ex_1" height="300">
+        </div>
+        <div class="column" id="image_col">
+          <img src="{{ url_for('static', filename='images/ex_2.png') }}" alt="ex_2" height="300">
+        </div>
+      </div>
+      <p>
+          After the face extraction process, each image was converted into grayscale and then resized into a 100x100 pixel image, thus totalling 10,000 pixels per image.
+      </p>
+        <div class="row" id="image_row">
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_3.png') }}" alt="ex_3" height="300">
+            </div>
+        </div>
+        <div class="row" id="image_row">
+            <p>
+                The next step was to reduct the amount of pixels per image with 
+                <a href="https://builtin.com/data-science/step-step-explanation-principal-component-analysis" target="_blank">Principal Component Analysis (PCA)</a>,
+                a method that reduces the dimensionality of the data while minimizing information loss.
+                With 100 principal components, we were able to retain a little above 85% of the variance of the original grayscale images.
+            </p>
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_4.png') }}" alt="ex_4" height="300">
+            </div>
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_5.png') }}" alt="ex_5" height="300">
+            </div>
+            <p>
+                Afterwards, the PCA data was normalized into a 0-1 range and trained/tested on a  
+                <a href="https://www.analyticsvidhya.com/blog/2017/09/understaing-support-vector-machine-example-code/" target="_blank">Support Vector Machine</a> classifier.
+                After the initial performance metrics of the model were obtained, the model was hyperparameter-tuned using 
+                <a href="https://www.analyticsvidhya.com/blog/2021/06/tune-hyperparameters-with-gridsearchcv/" target="_blank">GridSearchCV</a> to create a model with high test accuracy.
+            </p>
+        </div>
+        <div class="row" id="image_row">
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_6.png') }}" alt="ex_6" height="300">
+            </div>
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_8.png') }}" alt="ex_8" height="300">
+            </div>
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_7.png') }}" alt="ex_7" height="400">
+            </div>
+        </div>
+        <div class="row" id="image_row">
+            <p>
+                Finally, a model pipeline was created for new images that converts the image into the proper format for the classifier and outputs a result.
+            </p>
+            <div class="column" id="image_col">
+                <img src="{{ url_for('static', filename='images/ex_9.png') }}" alt="ex_9" height="300">
+            </div>
+        </div>
+</div>
+
+
+
+{% endblock %}
