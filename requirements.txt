@@ -3,5 +3,6 @@ pandas
 scipy
 Flask
 scikit-learn
+opencv-python
 gunicorn
 pillow
