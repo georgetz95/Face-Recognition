@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 import numpy as np
+import cv2
+import pickle
 from PIL import Image
 import os
 from utils import pipeline_model
