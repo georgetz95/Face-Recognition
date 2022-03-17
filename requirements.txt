@@ -73,6 +73,6 @@ webencodings==0.5.1
 Werkzeug==2.0.3
 widgetsnbextension==3.6.0
 zipp==3.7.0
-ffmpeg
+python3-opencv
 opencv-python-headless
 gunicorn
