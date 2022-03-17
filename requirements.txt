@@ -74,5 +74,6 @@ Werkzeug==2.0.3
 widgetsnbextension==3.6.0
 zipp==3.7.0
 python3-opencv
+libgl1
 opencv-python-headless
 gunicorn
