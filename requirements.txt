@@ -56,9 +56,6 @@ pyparsing==3.0.7
 pyrsistent==0.18.1
 python-dateutil==2.8.2
 pytz
-pywinpty==2.0.5
-pyzmq==22.3.0
-qtconsole==5.2.2
 QtPy==2.0.1
 scikit-learn==1.0.2
 scipy==1.8.0
