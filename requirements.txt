@@ -72,6 +72,6 @@ webencodings==0.5.1
 Werkzeug==2.0.3
 widgetsnbextension==3.6.0
 zipp==3.7.0
-opencv-python-headless==4.2.0.32
+opencv-python-headless
 #opencv-python==4.5.5.64
 gunicorn
